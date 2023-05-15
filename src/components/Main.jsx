@@ -1,11 +1,15 @@
 import Number from "./Number"
 import Button from "./Button"
+import { useState } from "react"
 
-function Main(){
+const Main = () => {
+
+    const [counter, setCounter] = useState(0)
+
     return(
         <div className="main">
-            <Number/>
-            <Button/>
+            <Number counter={counter}/>
+            <Button counter={counter} setCounter={setCounter}/>
         </div>
     )
 }
